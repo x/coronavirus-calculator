@@ -1,14 +1,14 @@
 {
   "main.css": "/coronavirus-calculator/static/css/main.c81e45c9.chunk.css",
-  "main.js": "/coronavirus-calculator/static/js/main.9cf81c89.chunk.js",
-  "main.js.map": "/coronavirus-calculator/static/js/main.9cf81c89.chunk.js.map",
+  "main.js": "/coronavirus-calculator/static/js/main.d25da5b9.chunk.js",
+  "main.js.map": "/coronavirus-calculator/static/js/main.d25da5b9.chunk.js.map",
   "runtime~main.js": "/coronavirus-calculator/static/js/runtime~main.c980daca.js",
   "runtime~main.js.map": "/coronavirus-calculator/static/js/runtime~main.c980daca.js.map",
   "static/css/2.c2fb480b.chunk.css": "/coronavirus-calculator/static/css/2.c2fb480b.chunk.css",
   "static/js/2.d8c32d75.chunk.js": "/coronavirus-calculator/static/js/2.d8c32d75.chunk.js",
   "static/js/2.d8c32d75.chunk.js.map": "/coronavirus-calculator/static/js/2.d8c32d75.chunk.js.map",
   "index.html": "/coronavirus-calculator/index.html",
-  "precache-manifest.7e4847c46eb8790ba193f72472133c60.js": "/coronavirus-calculator/precache-manifest.7e4847c46eb8790ba193f72472133c60.js",
+  "precache-manifest.f8afb109b4884771f39d6525dcf4e4c1.js": "/coronavirus-calculator/precache-manifest.f8afb109b4884771f39d6525dcf4e4c1.js",
   "service-worker.js": "/coronavirus-calculator/service-worker.js",
   "static/css/2.c2fb480b.chunk.css.map": "/coronavirus-calculator/static/css/2.c2fb480b.chunk.css.map",
   "static/css/main.c81e45c9.chunk.css.map": "/coronavirus-calculator/static/css/main.c81e45c9.chunk.css.map"
