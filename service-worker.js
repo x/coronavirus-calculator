@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/coronavirus-calculator/precache-manifest.0abb53799dfa05a3586dec277cecc4dd.js"
+  "/coronavirus-calculator/precache-manifest.bceb1313f6023019ea267dafa30e8482.js"
 );
 
 workbox.clientsClaim();

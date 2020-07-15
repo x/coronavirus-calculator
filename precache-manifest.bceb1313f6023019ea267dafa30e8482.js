@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "29843a28ac364630f6f9",
-    "url": "/coronavirus-calculator/static/css/main.fee009be.chunk.css"
+    "revision": "ddfe88476e6e9538d179",
+    "url": "/coronavirus-calculator/static/css/main.93f30571.chunk.css"
   },
   {
-    "revision": "29843a28ac364630f6f9",
-    "url": "/coronavirus-calculator/static/js/main.f96d9770.chunk.js"
+    "revision": "ddfe88476e6e9538d179",
+    "url": "/coronavirus-calculator/static/js/main.9cf81c89.chunk.js"
   },
   {
     "revision": "ab93e97d5ed2c3402b95",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/coronavirus-calculator/static/js/2.d8c32d75.chunk.js"
   },
   {
-    "revision": "4a9f001a1b5f2fa42d305b210101d40c",
+    "revision": "4d2c10c77b0e359ec4d0a1a616bdeac2",
     "url": "/coronavirus-calculator/index.html"
   }
 ];
