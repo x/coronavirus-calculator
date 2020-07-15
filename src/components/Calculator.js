@@ -6,7 +6,6 @@ import "../styles/Calculator.css";
 import "react-input-range/lib/css/index.css";
 
 class Calculator extends Component {
-
   DAYS_CONTAGIOUS_DEFAULT = 10;
   /*
    * Use this multiplier to convert dailyCases per day to the number of circulating cases. This
@@ -19,12 +18,12 @@ class Calculator extends Component {
    *    symptoms someone gets tested or the portion of people who change their behavior.
    */
 
-   PERCENT_REPORTED = 10
-   /*
-    * This based on CDC Director Robert Redfield's comment at the end of June [a] that a good rough
-    * estimate of actual cases to reported cases is 10-1.
-    * a. https://www.cdc.gov/media/releases/2020/t0625-COVID-19-update.html
-    */
+  PERCENT_REPORTED = 10;
+  /*
+   * This based on CDC Director Robert Redfield's comment at the end of June [a] that a good rough
+   * estimate of actual cases to reported cases is 10-1.
+   * a. https://www.cdc.gov/media/releases/2020/t0625-COVID-19-update.html
+   */
 
   state = {
     populationValue: 19450000, // NY
@@ -61,7 +60,10 @@ class Calculator extends Component {
 
     return (
       <div className="App">
-        <h4>My state as a population of {populationValue.toLocaleString()}</h4>
+        <h4>
+          My state as a population of{" "}
+          <mark>{populationValue.toLocaleString()}</mark>
+        </h4>
         <InputRange
           step={50000}
           maxValue={40000000}
@@ -70,8 +72,8 @@ class Calculator extends Component {
           onChange={this.handlePopulationChange}
         />
         <h4>
-          My state has a 7-day rolling average of {dailyCasesValue.toLocaleString()} daily cases
-          per day
+          My state has a 7-day rolling average of{" "}
+          <mark>{dailyCasesValue.toLocaleString()}</mark> daily cases per day
         </h4>
         <InputRange
           step={100}
@@ -81,8 +83,8 @@ class Calculator extends Component {
           onChange={this.handleDailyCasesChange}
         />
         <h4>
-          A person who tested positive for the virus is contagious for{" "}
-          {daysContagiousValue} days
+          A person who tested positive for the virus is contagious and
+          circulating for <marK>{daysContagiousValue}</marK> days
         </h4>
         <InputRange
           step={1}
@@ -92,7 +94,7 @@ class Calculator extends Component {
           onChange={this.handleDaysContagiousChange}
         />
         <h4>
-          Only {percentReportedValue}% of cases are reported
+          Only <mark>{percentReportedValue}%</mark> of cases are reported
         </h4>
         <InputRange
           step={1}
@@ -101,7 +103,10 @@ class Calculator extends Component {
           value={percentReportedValue}
           onChange={this.handlePartReportedChange}
         />
-        <h4>I'm attending an event with {groupValue.toLocaleString()} people</h4>
+        <h4>
+          I'm attending an event with <mark>{groupValue.toLocaleString()}</mark>{" "}
+          people
+        </h4>
         <InputRange
           step={1}
           maxValue={300}
@@ -116,6 +121,13 @@ class Calculator extends Component {
           percentReported={percentReportedValue}
           group={groupValue}
         />
+        <br></br>
+        <small>
+          Based on{" "}
+          <a href="https://marginalrevolution.com/marginalrevolution/2020/03/covid-19-event-risk-assessment-planner.html">
+            COVID-19 Event Risk Assessment Planner by Alex Tabarrok
+          </a>
+        </small>
       </div>
     );
   }

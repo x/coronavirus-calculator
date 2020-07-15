@@ -7,7 +7,7 @@ body {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: -10px !important;
 }
 
@@ -21,12 +21,6 @@ small {
   margin: 0;
 }
 
-.flex {
-  padding-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
 .App {
   display: flex;
   flex-direction: column;
@@ -34,8 +28,8 @@ small {
   text-align: center;
   padding: 2rem;
   border-radius: 0.5rem;
-  width: 30rem;
-  margin: 20vh auto;
+  width: 35rem;
+  margin: 5vh auto;
   box-shadow: 15px 20px 70px -10px;
 }
 

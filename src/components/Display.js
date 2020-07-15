@@ -29,8 +29,8 @@ class Display extends Component {
 
   render() {
     return (
-      <div className="flex">
-        <DisplayChild func={this.odds()} text="chance someone has COVID" />
+      <div>
+        <DisplayChild func={this.odds()} text="chance someone at the event is contageous" />
       </div>
     );
   }
