@@ -2,7 +2,7 @@
   "name": "coronavirus-calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://x.github.io/coronavirus-calculator",
+  "homepage": "http://x.github.io/coronavirus-calculator/",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
