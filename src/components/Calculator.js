@@ -62,7 +62,7 @@ class Calculator extends Component {
       <div className="App">
         <h4>
           My state as a population of{" "}
-          <mark>{populationValue.toLocaleString()}</mark>
+          <u>{populationValue.toLocaleString()}</u>
         </h4>
         <InputRange
           step={50000}
@@ -73,7 +73,7 @@ class Calculator extends Component {
         />
         <h4>
           My state has a 7-day rolling average of{" "}
-          <mark>{dailyCasesValue.toLocaleString()}</mark> daily cases per day
+          <u>{dailyCasesValue.toLocaleString()}</u> daily cases per day
         </h4>
         <InputRange
           step={100}
@@ -84,7 +84,7 @@ class Calculator extends Component {
         />
         <h4>
           A person who tested positive for the virus is contagious and
-          circulating for <marK>{daysContagiousValue}</marK> days
+          circulating for <u>{daysContagiousValue}</u> days
         </h4>
         <InputRange
           step={1}
@@ -94,7 +94,7 @@ class Calculator extends Component {
           onChange={this.handleDaysContagiousChange}
         />
         <h4>
-          Only <mark>{percentReportedValue}%</mark> of cases are reported
+          Only <u>{percentReportedValue}%</u> of cases are reported
         </h4>
         <InputRange
           step={1}
@@ -104,7 +104,7 @@ class Calculator extends Component {
           onChange={this.handlePartReportedChange}
         />
         <h4>
-          I'm attending an event with <mark>{groupValue.toLocaleString()}</mark>{" "}
+          I'm attending an event with <u>{groupValue.toLocaleString()}</u>{" "}
           people
         </h4>
         <InputRange
