@@ -1,5 +1,5 @@
 html {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 body {
@@ -28,7 +28,7 @@ small {
   text-align: center;
   padding: 2rem;
   border-radius: 0.5rem;
-  width: 35rem;
+  max-width: 35rem;
   margin: 5vh auto;
   box-shadow: 15px 20px 70px -10px;
 }
