@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/coronavirus-calculator/static/js/2.d8c32d75.chunk.js"
   },
   {
-    "revision": "7732c53e454f1de4657fc9fe92384db1",
+    "revision": "defd0c54ff743b98818c6cb07342c67d",
     "url": "/coronavirus-calculator/index.html"
   }
 ];
