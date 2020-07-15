@@ -1,26 +1,26 @@
 self.__precacheManifest = [
   {
-    "revision": "d87d06a2b6ac0527157e",
+    "revision": "cb8a2fca95bc55aae7ef",
     "url": "/coronavirus-calculator/static/css/main.c81e45c9.chunk.css"
   },
   {
-    "revision": "d87d06a2b6ac0527157e",
-    "url": "/coronavirus-calculator/static/js/main.d25da5b9.chunk.js"
+    "revision": "cb8a2fca95bc55aae7ef",
+    "url": "/coronavirus-calculator/static/js/main.967decaa.chunk.js"
   },
   {
     "revision": "ab93e97d5ed2c3402b95",
     "url": "/coronavirus-calculator/static/js/runtime~main.c980daca.js"
   },
   {
-    "revision": "3c2182dd8e2e620f79cc",
+    "revision": "b52bef8cc5e3c2a9237b",
     "url": "/coronavirus-calculator/static/css/2.c2fb480b.chunk.css"
   },
   {
-    "revision": "3c2182dd8e2e620f79cc",
-    "url": "/coronavirus-calculator/static/js/2.d8c32d75.chunk.js"
+    "revision": "b52bef8cc5e3c2a9237b",
+    "url": "/coronavirus-calculator/static/js/2.d962bca2.chunk.js"
   },
   {
-    "revision": "defd0c54ff743b98818c6cb07342c67d",
+    "revision": "a70f2b48bb585516eb6728cbecf4833a",
     "url": "/coronavirus-calculator/index.html"
   }
 ];
