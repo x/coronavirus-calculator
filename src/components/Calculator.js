@@ -33,21 +33,40 @@ class Calculator extends Component {
     percentReportedValue: this.PERCENT_REPORTED,
   };
 
+  updateSearchParams = () => {
+    const params = new URLSearchParams();
+    for (const prop in this.state) {
+      params.append(prop, this.state[prop]);
+    }
+    window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+  }
+
   handlePopulationChange = (value) => {
     this.setState({ populationValue: value });
+    this.updateSearchParams();
   };
   handleDailyCasesChange = (value) => {
     this.setState({ dailyCasesValue: value });
+    this.updateSearchParams();
   };
   handleDaysContagiousChange = (value) => {
     this.setState({ daysContagiousValue: value });
+    this.updateSearchParams();
   };
   handlePartReportedChange = (value) => {
     this.setState({ percentReportedValue: value });
+    this.updateSearchParams();
   };
   handlegroupChange = (value) => {
-    this.setState({ groupValue: value });
+    this.updateSearchParams({ groupValue: value });
   };
+
+  constructor(props) {
+    super(props);
+    for (const [prop, val] of new URLSearchParams(window.location.search)) {
+      this.state[prop] = parseInt(val);
+    }
+  }
 
   render() {
     const {
