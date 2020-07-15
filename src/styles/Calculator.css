@@ -22,7 +22,7 @@ small {
 }
 
 .flex {
-  padding-top: 15px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -34,7 +34,7 @@ small {
   text-align: center;
   padding: 2rem;
   border-radius: 0.5rem;
-  width: 19rem;
+  width: 30rem;
   margin: 20vh auto;
   box-shadow: 15px 20px 70px -10px;
 }
