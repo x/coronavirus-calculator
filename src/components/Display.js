@@ -15,8 +15,9 @@ class Display extends Component {
       percentReported,
       group,
     } = this.props;
-    const circulatingCases = (dailyCases * daysContagious) / (percentReported / 100);
-    const prob = 1 - Math.pow(1 - (circulatingCases / population), group);
+    const circulatingCases =
+      (dailyCases * daysContagious) / (percentReported / 100);
+    const prob = 1 - Math.pow(1 - circulatingCases / population, group);
 
     if (prob >= 0.9999) {
       // Never be 100% sure of anything...
@@ -27,21 +28,43 @@ class Display extends Component {
     return <p>{(prob * 100).toFixed(2)}%</p>;
   };
 
+  formula = () => {
+    const {
+      population,
+      dailyCases,
+      daysContagious,
+      percentReported,
+      group,
+    } = this.props;
+    return (
+      <small>
+        p = 1 - (1 - ({dailyCases.toLocaleString()} * {daysContagious} /{" "}
+        {percentReported / 100}) / {population.toLocaleString()}) ^{" "}
+        {group.toLocaleString()}
+      </small>
+    );
+  };
+
   render() {
     return (
       <div>
-        <DisplayChild func={this.odds()} text="chance someone at the event is contageous" />
+        <DisplayChild
+          func={this.odds()}
+          text="chance that someone at the event is contageous"
+        />
+        <br></br>
+        {this.formula()}
       </div>
     );
   }
 }
 
 Display.propTypes = {
-  dailyCasesValue: PropTypes.number.isRequired,
-  populationValue: PropTypes.number.isRequired,
+  dailyCases: PropTypes.number.isRequired,
+  population: PropTypes.number.isRequired,
   daysContagious: PropTypes.number.isRequired,
   percentReported: PropTypes.number.isRequired,
-  groupValue: PropTypes.number.isRequired,
+  group: PropTypes.number.isRequired,
 };
 
 export default Display;
