@@ -152,6 +152,8 @@ class Calculator extends Component {
           <a href="https://marginalrevolution.com/marginalrevolution/2020/03/covid-19-event-risk-assessment-planner.html">
             COVID-19 Event Risk Assessment Planner by Alex Tabarrok
           </a>
+          <br></br>
+          source code at <a href="https://github.com/x/coronavirus-calculator">github.com/x/coronavirus-calculator</a>.
         </small>
       </div>
     );
