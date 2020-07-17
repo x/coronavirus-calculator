@@ -49,11 +49,11 @@ class Display extends Component {
     return (
       <div>
         <DisplayChild
+          header="The chance that at least one person is contagious is"
           func={this.odds()}
-          text="chance that someone at the event is contageous"
+          text={this.formula()}
         />
         <br></br>
-        {this.formula()}
       </div>
     );
   }

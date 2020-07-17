@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const DisplayChild = ({ func, text }) => {
+const DisplayChild = ({ func, header, text }) => {
   return (
     <span>
+    <h4>{header}</h4>
       {func} <small>{text}</small>
     </span>
   );

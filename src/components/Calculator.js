@@ -17,7 +17,7 @@ const getStateCases = (state) => {
 };
 
 const getStateDate = (state) => {
-  return (new Date(cases[populations[state].name].date)).toDateString();
+  return new Date(cases[populations[state].name].date).toDateString();
 };
 
 class Calculator extends Component {
@@ -88,7 +88,7 @@ class Calculator extends Component {
 
     return (
       <div className="App">
-        <h4>I am attending an event in the state of</h4>
+        <h4>I am attending an event in</h4>
         <div>
           <SelectUSState
             className="state-picker"
@@ -101,7 +101,7 @@ class Calculator extends Component {
           residents
         </h4>
         <small>
-          As of the 2019 cencus, {stateValue} had a population of{" "}
+          As of the 2019 census, {stateValue} had a population of{" "}
           {getStatePopulation(stateValue).toLocaleString()}.
         </small>
         <InputRange
