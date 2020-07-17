@@ -31,15 +31,18 @@ class Calculator extends Component {
   };
 
   updateSearchParams = () => {
-    const params = new URLSearchParams();
-    for (const prop in this.state) {
-      params.append(prop, this.state[prop]);
-    }
-    window.history.replaceState(
-      {},
-      "",
-      `${window.location.pathname}?${params}`
-    );
+    clearTimeout(this.updateSearchParamsTimeout);
+    this.updateSearchParamsTimeout = setTimeout(() => {
+      const params = new URLSearchParams();
+      for (const prop in this.state) {
+        params.append(prop, this.state[prop]);
+      }
+      window.history.replaceState(
+        {},
+        "",
+        `${window.location.pathname}?${params}`
+      );
+    }, 500);
   };
 
   handlePopulationChange = (value) => {
