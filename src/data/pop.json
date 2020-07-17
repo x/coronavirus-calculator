@@ -1,0 +1,238 @@
+{
+  "AK": {
+    "name": "Alaska",
+    "population": 731545
+  },
+  "AL": {
+    "name": "Alabama",
+    "population": 4903185
+  },
+  "AR": {
+    "name": "Arkansas",
+    "population": 3017804
+  },
+  "AS": {
+    "name": "American Samoa",
+    "population": 55312
+  },
+  "AZ": {
+    "name": "Arizona",
+    "population": 7278717
+  },
+  "CA": {
+    "name": "California",
+    "population": 39512223
+  },
+  "CO": {
+    "name": "Colorado",
+    "population": 5758736
+  },
+  "CT": {
+    "name": "Connecticut",
+    "population": 3565287
+  },
+  "DC": {
+    "name": "District Of Columbia",
+    "population": 705749
+  },
+  "DE": {
+    "name": "Delaware",
+    "population": 973764
+  },
+  "FL": {
+    "name": "Florida",
+    "population": 21477737
+  },
+  "FM": {
+    "name": "Federated States Of Micronesia",
+    "population": 104929
+  },
+  "GA": {
+    "name": "Georgia",
+    "population": 10617423
+  },
+  "GU": {
+    "name": "Guam",
+    "population": 167294
+  },
+  "HI": {
+    "name": "Hawaii",
+    "population": 1415872
+  },
+  "IA": {
+    "name": "Iowa",
+    "population": 3155070
+  },
+  "ID": {
+    "name": "Idaho",
+    "population": 1787065
+  },
+  "IL": {
+    "name": "Illinois",
+    "population": 12671821
+  },
+  "IN": {
+    "name": "Indiana",
+    "population": 6732219
+  },
+  "KS": {
+    "name": "Kansas",
+    "population": 2913314
+  },
+  "KY": {
+    "name": "Kentucky",
+    "population": 4467673
+  },
+  "LA": {
+    "name": "Louisiana",
+    "population": 4648794
+  },
+  "MA": {
+    "name": "Massachusetts",
+    "population": 6892503
+  },
+  "MD": {
+    "name": "Maryland",
+    "population": 6045680
+  },
+  "ME": {
+    "name": "Maine",
+    "population": 1344212
+  },
+  "MH": {
+    "name": "Marshall Islands",
+    "population": 58791
+  },
+  "MI": {
+    "name": "Michigan",
+    "population": 9986857
+  },
+  "MN": {
+    "name": "Minnesota",
+    "population": 5639632
+  },
+  "MO": {
+    "name": "Missouri",
+    "population": 6137428
+  },
+  "MP": {
+    "name": "Northern Mariana Islands",
+    "population": 51994
+  },
+  "MS": {
+    "name": "Mississippi",
+    "population": 2976149
+  },
+  "MT": {
+    "name": "Montana",
+    "population": 1068778
+  },
+  "NC": {
+    "name": "North Carolina",
+    "population": 10488084
+  },
+  "ND": {
+    "name": "North Dakota",
+    "population": 762062
+  },
+  "NE": {
+    "name": "Nebraska",
+    "population": 1934408
+  },
+  "NH": {
+    "name": "New Hampshire",
+    "population": 1359711
+  },
+  "NJ": {
+    "name": "New Jersey",
+    "population": 8882190
+  },
+  "NM": {
+    "name": "New Mexico",
+    "population": 2096829
+  },
+  "NV": {
+    "name": "Nevada",
+    "population": 3080156
+  },
+  "NY": {
+    "name": "New York",
+    "population": 19453561
+  },
+  "OH": {
+    "name": "Ohio",
+    "population": 11689100
+  },
+  "OK": {
+    "name": "Oklahoma",
+    "population": 3956971
+  },
+  "OR": {
+    "name": "Oregon",
+    "population": 4217737
+  },
+  "PA": {
+    "name": "Pennsylvania",
+    "population": 12801989
+  },
+  "PR": {
+    "name": "Puerto Rico",
+    "population": 3193694
+  },
+  "PW": {
+    "name": "Palau",
+    "population": 18008
+  },
+  "RI": {
+    "name": "Rhode Island",
+    "population": 1059361
+  },
+  "SC": {
+    "name": "South Carolina",
+    "population": 5148714
+  },
+  "SD": {
+    "name": "South Dakota",
+    "population": 884659
+  },
+  "TN": {
+    "name": "Tennessee",
+    "population": 6829174
+  },
+  "TX": {
+    "name": "Texas",
+    "population": 28995881
+  },
+  "UT": {
+    "name": "Utah",
+    "population": 3205958
+  },
+  "VA": {
+    "name": "Virginia",
+    "population": 8535519
+  },
+  "VI": {
+    "name": "Virgin Islands",
+    "population": 104578
+  },
+  "VT": {
+    "name": "Vermont",
+    "population": 623989
+  },
+  "WA": {
+    "name": "Washington",
+    "population": 7614893
+  },
+  "WI": {
+    "name": "Wisconsin",
+    "population": 5822434
+  },
+  "WV": {
+    "name": "West Virginia",
+    "population": 1792147
+  },
+  "WY": {
+    "name": "Wyoming",
+    "population": 578759
+  }
+}

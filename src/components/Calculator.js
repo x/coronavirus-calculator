@@ -1,17 +1,33 @@
 import React, { Component } from "react";
 import InputRange from "react-input-range";
 import Display from "./Display";
+import SelectUSState from "./SelectUSState";
+import populations from "../data/pop.json";
+import cases from "../data/cases.json";
 
 import "../styles/Calculator.css";
 import "react-input-range/lib/css/index.css";
 
+const getStatePopulation = (state) => {
+  return populations[state].population;
+};
+
+const getStateCases = (state) => {
+  return Math.floor(cases[populations[state].name].new_cases_7day);
+};
+
+const getStateDate = (state) => {
+  return (new Date(cases[populations[state].name].date)).toDateString();
+};
+
 class Calculator extends Component {
   state = {
-    populationValue: 19450000, // NY
-    dailyCasesValue: 560, // NY 7-day average (July 14th)
+    populationValue: getStatePopulation("NY"), // NY
+    dailyCasesValue: getStateCases("NY"),
     groupValue: 25,
     daysContagiousValue: 10,
     percentReportedValue: 10,
+    stateValue: "NY",
   };
 
   updateSearchParams = () => {
@@ -27,30 +43,35 @@ class Calculator extends Component {
   };
 
   handlePopulationChange = (value) => {
-    this.setState({ populationValue: value });
-    this.updateSearchParams();
+    this.setState({ populationValue: value }, this.updateSearchParams);
   };
   handleDailyCasesChange = (value) => {
-    this.setState({ dailyCasesValue: value });
-    this.updateSearchParams();
+    this.setState({ dailyCasesValue: value }, this.updateSearchParams);
   };
   handleDaysContagiousChange = (value) => {
-    this.setState({ daysContagiousValue: value });
-    this.updateSearchParams();
+    this.setState({ daysContagiousValue: value }, this.updateSearchParams);
   };
   handlePartReportedChange = (value) => {
-    this.setState({ percentReportedValue: value });
-    this.updateSearchParams();
+    this.setState({ percentReportedValue: value }, this.updateSearchParams);
   };
   handleGroupChange = (value) => {
-    this.setState({ groupValue: value });
-    this.updateSearchParams();
+    this.setState({ groupValue: value }, this.updateSearchParams);
+  };
+  handleStateChange = (stateValue) => {
+    this.setState(
+      {
+        stateValue: stateValue,
+        populationValue: getStatePopulation(stateValue),
+        dailyCasesValue: getStateCases(stateValue),
+      },
+      this.updateSearchParams
+    );
   };
 
   constructor(props) {
     super(props);
     for (const [prop, val] of new URLSearchParams(window.location.search)) {
-      this.state[prop] = parseInt(val);
+      this.state[prop] = Number.isNaN(parseInt(val)) ? val : parseInt(val);
     }
   }
 
@@ -61,14 +82,28 @@ class Calculator extends Component {
       daysContagiousValue,
       percentReportedValue,
       groupValue,
+      stateValue,
     } = this.state;
+    console.log(stateValue);
 
     return (
       <div className="App">
+        <h4>I am attending an event in the state of</h4>
+        <div>
+          <SelectUSState
+            className="state-picker"
+            value={stateValue}
+            onChange={this.handleStateChange}
+          />
+        </div>
         <h4>
-          I am attending an event in a state or county with a population of{" "}
-          <u>{populationValue.toLocaleString()}</u> residents
+          With a population of <u>{populationValue.toLocaleString()}</u>{" "}
+          residents
         </h4>
+        <small>
+          As of the 2019 cencus, {stateValue} had a population of{" "}
+          {getStatePopulation(stateValue).toLocaleString()}.
+        </small>
         <InputRange
           step={50000}
           maxValue={40000000}
@@ -77,9 +112,17 @@ class Calculator extends Component {
           onChange={this.handlePopulationChange}
         />
         <h4>
-          This state or county has an average of{" "}
-          <u>{dailyCasesValue.toLocaleString()}</u> daily new cases per day
+          And <u>{dailyCasesValue.toLocaleString()}</u> daily new cases per day
         </h4>
+        <small>
+          As of {getStateDate(stateValue)}, {stateValue} has a 7-day average of{" "}
+          {getStateCases(stateValue).toLocaleString()} new cases per day
+          according to the{" "}
+          <a href="https://github.com/nytimes/covid-19-data">
+            NYT Covid data set
+          </a>
+          .
+        </small>
         <InputRange
           step={100}
           maxValue={20000}
@@ -153,7 +196,11 @@ class Calculator extends Component {
             COVID-19 Event Risk Assessment Planner by Alex Tabarrok
           </a>
           <br></br>
-          source code at <a href="https://github.com/x/coronavirus-calculator">github.com/x/coronavirus-calculator</a>.
+          source code at{" "}
+          <a href="https://github.com/x/coronavirus-calculator">
+            github.com/x/coronavirus-calculator
+          </a>
+          .
         </small>
       </div>
     );
